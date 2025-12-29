@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/palastine-logo.svg" type="image/png">
+
+</head>
+
+<body>
+
+    <div class="background-wrapper"></div>
+
+    <main class="notion-page">
+        <!-- Hero Section -->
+        <header class="hero-section animate-on-scroll">
+            <h1>Boka</h1>
+            <p class="subtitle">Get booked. Get paid. Grow your business.
+                <br>
+                Boka is the all-in-one booking app for barbers, salons, and beauty professionals
+            </p>
+        </header>
+
+        <hr class="divider animate-on-scroll">
+
+        <!-- Showcase Section -->
+        <section class="showcase-section animate-on-scroll">
+            <h2 class="section-title">Our Work</h2>
+            <div class="gallery-grid">
+                <!-- <div class="gallery-item">
+                    <div class="placeholder-img" style="background-color: #ffe8cc;">Example Salon</div>
+                    <p class="caption">The Cut Above</p>
+                </div> -->
+                <a href="https://alisbarber-dev.netlify.app/" target="_blank" class="gallery-item-link">
+                    <div class="gallery-item">
+                        <div class="placeholder-img"
+                            style="background: url('images/alisbarber.png') center/cover no-repeat;"></div>
+                        <p class="caption">Ali's Barbers ↗</p>
+                    </div>
+                </a>
+                <!-- <div class="gallery-item">
+                    <div class="placeholder-img" style="background-color: #e3fac7;">Spa Site</div>
+                    <p class="caption">Serenity Spa</p>
+                </div> -->
+            </div>
+        </section>
+
+        <hr class="divider animate-on-scroll">
+
+        <!-- Pricing Section -->
+        <section class="pricing-section animate-on-scroll">
+            <h2 class="section-title">Plans & Pricing</h2>
+            <div class="pricing-container">
+                <div class="pricing-card">
+                    <div class="price-header">
+                        <h3>Basic</h3>
+                        <span class="price">£12<span class="per-month">/mo</span></span>
+                    </div>
+                    <ul class="features-list">
+                        <li><span class="check">✓</span> Custom website</li>
+                        <li><span class="check">✓</span> Web hosting</li>
+                    </ul>
+                    <button class="cta-button">Select Basic</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="price-header">
+                        <h3>Advanced</h3>
+                        <span class="price">£20<span class="per-month">/mo</span></span>
+                    </div>
+                    <ul class="features-list">
+                        <li><span class="check">✓</span> Online payment</li>
+                        <li><span class="check">✓</span> Google calendar integration</li>
+                        <li><span class="check">✓</span> Email notifications</li>
+                        <li><span class="check">✓</span> Staff dashboard</li>
+                        <li><span class="check">✓</span> Set your Weekly availability</li>
+                        <li><span class="check">✓</span> Appointments Management</li>
+                    </ul>
+                    <button class="cta-button primary">Select Advanced</button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider animate-on-scroll">
+
+        <!-- Demo Section -->
+        <section class="demo-section animate-on-scroll">
+            <h2 class="section-title">Try it out</h2>
+            <div class="demo-box">
+                <p>Want to see how it works? Check out our interactive demo application.</p>
+                <button class="cta-button demo-btn primary" onclick="openDemo()">Open Demo App ↗</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+/* Notion-esque variable system optimized for Premium SaaS */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #37352F;
+    --text-secondary: #6e6d69;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --card-border: rgba(0, 0, 0, 0.06);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.12);
+    --accent-glow: rgba(55, 53, 47, 0.08);
+
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: #FCFCFC;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* Background Animation */
+.background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 15% 50%, rgba(255, 228, 230, 0.4), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(230, 240, 255, 0.5), transparent 25%);
+    animation: bgPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Layout */
+.notion-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .notion-page {
+        padding: 60px 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(30px);
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.icon-header {
+    font-size: 80px;
+    margin-bottom: 24px;
+    display: inline-block;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #37352F 0%, #68645c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 1.35rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Dividers */
+.divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.06), transparent);
+    margin: 60px 0;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    color: var(--text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #e0e0e0;
+    border-radius: 2px;
+}
+
+/* Pricing Cards - Glassmorphism */
+.pricing-container {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-sm);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: transparent;
+    transition: background 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.pricing-card.featured::before {
+    background: var(--text-color);
+}
+
+.price-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.per-month {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+    flex-grow: 1;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #eefdf2;
+    color: #1a8f3e;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 12px;
+}
+
+/* Buttons */
+.cta-button {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    background: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    color: var(--text-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cta-button:hover {
+    background: #f7f7f5;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cta-button.primary {
+    background: var(--text-color);
+    color: white;
+    border-color: var(--text-color);
+}
+
+.cta-button.primary:hover {
+    background: #1f1f1d;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Showcase */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.gallery-item {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--card-border);
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.placeholder-img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.gallery-item:hover .placeholder-img::after {
+    transform: translateX(100%);
+}
+
+.caption {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 0 4px;
+    color: var(--text-color);
+}
+
+/* Demo Section */
+.demo-section {
+    margin-bottom: 60px;
+}
+
+.demo-box {
+    background: linear-gradient(135deg, #fdfbf7 0%, #f4f4f0 100%);
+    padding: 48px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.demo-box p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+}
+
+.demo-btn {
+    width: auto;
+    padding: 12px 32px;
+}
+
+/* Logo & Interaction */
+.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-md);
+    animation: float 6s ease-in-out infinite;
+}
+
+.gallery-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
