@@ -26,36 +26,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#ffffff]">
-    <div class="tw-absolute tw-top-0 tw-flex tw-h-[150px] tw-w-full">
-        <div class="header-gradient tw-h-full tw-w-full"></div>
-    </div>
+<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-notion-text">
 
-    <header
-        class="lgtw-max-w-lg:tw-justify-around tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] tw-text-black">
-        <!-- <a class="tw-h-[50px] tw-w-[120px] tw-p-[4px]" href="">
-            <img src="./assets/logo/boka_logo.png" alt="Boka Logo" class="tw-object tw-h-full tw-w-full" />
-        </a> -->
+    <!-- <header
+        class="lgtw-max-w-lg:tw-justify-around tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-fixed tw-top-0 tw-z-50 tw-flex tw-h-[60px] tw-w-full tw-bg-white/80 tw-backdrop-blur-md tw-border-b tw-border-notion-border tw-px-[5%] tw-text-notion-text">
         <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
             <div
-                class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+                class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-notion-text max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
                 <a class="header-links" href=""> About us </a>
                 <a class="header-links" href="#pricing"> Pricing </a>
                 <a class="header-links" href=""> Features </a>
-                <!-- <a class="header-links" href=""> Company </a> -->
             </div>
-            <!-- <div
-                class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center">
-                <a href="" aria-label="signup"
-                    class="tw-rounded-full tw-bg-primary tw-px-3 tw-py-2 tw-text-white tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2">
-                    <span>Get started</span>
-                    <i class="bi bi-arrow-right"></i>
-                </a>
-            </div> -->
         </div>
-        <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+        <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-notion-text lg:tw-hidden"
             onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
-    </header>
+    </header> -->
 
     <section
         class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]">
@@ -63,21 +48,23 @@
             class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center">
             <div class="tw-flex tw-flex-col tw-place-content-center tw-items-center">
                 <div
-                    class="tw-text-center tw-text-6xl tw-font-semibold tw-uppercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug">
+                    class="tw-text-center tw-text-6xl tw-font-bold tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug tw-animate-fade-in-up">
                     <br />
                     <span class="tw-text-primary">Boka </span>
                 </div>
-                <div class="tw-mt-10 tw-max-w-[600px] tw-p-2 tw-text-center max-lg:tw-max-w-full tw-text-lg">
+                <div
+                    class="tw-mt-10 tw-max-w-[600px] tw-p-2 tw-text-center max-lg:tw-max-w-full tw-text-lg tw-text-gray-600 tw-animate-fade-in-up [animation-delay:200ms]">
                     Get booked. Get paid. Grow your business.
                     The all-in-one booking platform for barbers, salons, and beauty professionals
                 </div>
 
-                <div class="tw-mt-4 tw-flex tw-flex-wrap tw-place-content-center tw-gap-4 tw-overflow-hidden tw-p-2">
-                    <a class="btn tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                <div
+                    class="tw-mt-8 tw-flex tw-flex-wrap tw-place-content-center tw-gap-4 tw-overflow-hidden tw-p-2 tw-animate-fade-in-up [animation-delay:400ms]">
+                    <a class="btn !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all"
                         href="https://alisbarber-dev.netlify.app/" target="_blank">
                         View Barber Demo
                     </a>
-                    <a class="btn !tw-bg-secondary !tw-text-primary tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.03]"
+                    <a class="btn !tw-bg-secondary !tw-text-primary !tw-border-primary/20 hover:tw-bg-secondary/80 hover:tw-scale-105 active:tw-scale-95 transition-all font-medium"
                         href="https://boka-business.netlify.app/" target="_blank">
                         <span>View Business Dashboard</span>
                     </a>
@@ -122,75 +109,78 @@
     -->
 
     <section
-        class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6">
+        class="reveal tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6">
         <div class="tw-flex tw-max-w-[750px] tw-flex-col tw-gap-5 tw-text-center">
             <h2 class="tw-mt-10 tw-text-4xl tw-font-semibold max-lg:tw-text-3xl">
-                Simple.
-                <span class="tw-text-primary">Fast.</span>
-                Loved
+                Powerful
+                <span class="tw-text-primary">Business</span>
+                Insights
             </h2>
 
-            <div class="tw-text-gray-700">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Temporibus consequatur odit exercitationem repellendus,
-                recusandae ratione at tenetur, omnis dicta tempore dolor
-                saepe quos doloremque tempora quibusdam. Aspernatur deserunt
-                voluptatem aliquid.
+            <div class="tw-text-gray-600">
+                Take control with a comprehensive financial overview and real-time booking management.
+                Monitor your revenue, track appointments, and grow your business with data-driven decisions
+                all from a single, intuitive dashboard.
             </div>
         </div>
     </section>
 
     <section
-        class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        class="reveal tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-12 tw-bg-notion-subtle"
         id="">
         <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
             <div class="tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
-                <h3 class="tw-text-xl tw-text-primary">
-                    Features loved by small businesses
+                <h3 class="tw-text-sm tw-font-bold tw-uppercase tw-tracking-widest tw-text-primary/60">
+                    Features
                 </h3>
-                <h2 class="tw-text-4xl tw-font-semibold">All you need in one place</h2>
+                <h2 class="tw-text-4xl tw-font-bold tw-text-primary">All you need in one place</h2>
             </div>
-            <div
-                class="tw-mt-6 tw-flex tw-max-w-[60%] tw-flex-wrap tw-place-content-center tw-gap-2 max-lg:tw-flex-col">
-                <div class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center">
-                    <i class="bi bi-calendar-check-fill tw-text-5xl tw-text-primary"></i>
-                    <h3 class="tw-text-2xl tw-font-semibold">Online Booking</h3>
-                    <div class="tw-text-[#595959]">
+            <div class="tw-mt-12 tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-6 tw-max-w-6xl">
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-calendar-check tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Online Booking</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
                         Let clients book appointments 24/7 with a seamless, mobile-friendly interface.
                     </div>
                 </div>
-                <div class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center">
-                    <i class="bi bi-credit-card-fill tw-text-5xl tw-text-primary"></i>
-                    <h3 class="tw-text-2xl tw-font-semibold">Online Payments</h3>
-                    <div class="tw-text-[#595959]">
-                        Secure integrated payments via Stripe. Take full payments upfront or pay in store.
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-credit-card tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Online Payments</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
+                        Secure integrated payments via Stripe. Take payments upfront or pay in store.
                     </div>
                 </div>
-                <div class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center">
-                    <i class="bi bi-graph-up-arrow tw-text-5xl tw-text-primary"></i>
-                    <h3 class="tw-text-2xl tw-font-semibold">Financial Dashboard</h3>
-                    <div class="tw-text-[#595959]">
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-graph-up tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Financial Dashboard</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
                         Real-time insights into your revenue, growth, and top-performing services.
                     </div>
                 </div>
-                <div class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center">
-                    <i class="bi bi-window-sidebar tw-text-5xl tw-text-primary"></i>
-                    <h3 class="tw-text-2xl tw-font-semibold">Custom Website</h3>
-                    <div class="tw-text-[#595959]">
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-layout-text-window-reverse tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Custom Website</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
                         A professionally designed website for your brand, fully integrated with your booking system.
                     </div>
                 </div>
-                <div class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center">
-                    <i class="bi bi-people-fill tw-text-5xl tw-text-primary"></i>
-                    <h3 class="tw-text-2xl tw-font-semibold">Staff Management</h3>
-                    <div class="tw-text-[#595959]">
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-people tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Staff Management</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
                         Manage working hours, rotations, and performance for your business.
                     </div>
                 </div>
-                <div class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center">
-                    <i class="bi bi-bell-fill tw-text-5xl tw-text-primary"></i>
-                    <h3 class="tw-text-2xl tw-font-semibold">Automated Alerts</h3>
-                    <div class="tw-text-[#595959]">
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-bell tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Automated Alerts</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
                         Reduce no-shows with automated SMS and email reminders for all appointments.
                     </div>
                 </div>
@@ -198,76 +188,72 @@
         </div>
     </section>
 
-    <section class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]">
-        <h3 class="tw-text-3xl tw-font-medium tw-text-primary max-md:tw-text-2xl">
+    <section class="reveal tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-p-[5%]">
+        <h2 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
             Success stories from our clients
-        </h3>
-        <!-- Testimonials -->
-        <div class="tw-mt-8 tw-gap-10 tw-space-y-8 max-md:tw-columns-1 lg:tw-columns-2 xl:tw-columns-3">
+        </h2>
+        <div class="tw-mt-12 tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8 tw-max-w-6xl">
             <div
-                class="tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-rounded-lg tw-p-4 tw-shadow-lg max-lg:tw-w-[320px]">
+                class="reveal tw-flex tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-6 shadow-sm">
                 <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div
-                        class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full tw-border-[2px] tw-border-solid tw-border-primary">
+                    <div class="tw-h-12 tw-w-12 tw-overflow-hidden tw-rounded-full tw-grayscale">
                         <img src="./assets/images/people/women.jpg" class="tw-h-full tw-w-full tw-object-cover"
                             alt="Sarah" />
                     </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Sarah Jenkins</div>
-                        <div class="tw-text-[#4b4b4b]">Bloom Salon, Owner</div>
+                    <div class="tw-flex tw-flex-col">
+                        <div class="tw-font-bold tw-text-primary">Sarah Jenkins</div>
+                        <div class="tw-text-sm tw-text-gray-500">Bloom Salon, Owner</div>
                     </div>
                 </div>
-                <p class="tw-mt-4 tw-italic tw-text-gray-600">
+                <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
                     "Boka has completely streamlined our booking process. My stylists love the easy schedule
                     management!"
                 </p>
             </div>
             <div
-                class="tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-rounded-lg tw-p-4 tw-shadow-lg max-lg:tw-w-[320px]">
+                class="reveal tw-flex tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-6 shadow-sm">
                 <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div
-                        class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full tw-border-[2px] tw-border-solid tw-border-primary">
+                    <div class="tw-h-12 tw-w-12 tw-overflow-hidden tw-rounded-full tw-grayscale">
                         <img src="./assets/images/people/man.jpg" class="tw-h-full tw-w-full tw-object-cover"
                             alt="Alex" />
                     </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Alex Rivera</div>
-                        <div class="tw-text-[#4b4b4b]">The Grooming Room, Barber</div>
+                    <div class="tw-flex tw-flex-col">
+                        <div class="tw-font-bold tw-text-primary">Alex Rivera</div>
+                        <div class="tw-text-sm tw-text-gray-500">The Grooming Room, Barber</div>
                     </div>
                 </div>
-                <p class="tw-mt-4 tw-italic tw-text-gray-600">
+                <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
                     "The automated reminders have significantly reduced our no-shows. It's a game changer for my
                     business."
                 </p>
             </div>
             <div
-                class="tw-flex tw-h-fit tw-w-[350px] tw-break-inside-avoid tw-flex-col tw-rounded-lg tw-p-4 tw-shadow-lg max-lg:tw-w-[320px]">
+                class="reveal tw-flex tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-6 shadow-sm">
                 <div class="tw-flex tw-place-items-center tw-gap-3">
-                    <div
-                        class="tw-h-[50px] tw-w-[50px] tw-overflow-hidden tw-rounded-full tw-border-[2px] tw-border-solid tw-border-primary">
+                    <div class="tw-h-12 tw-w-12 tw-overflow-hidden tw-rounded-full tw-grayscale">
                         <img src="./assets/images/people/man2.jpg" class="tw-h-full tw-w-full tw-object-cover"
                             alt="Michael" />
                     </div>
-                    <div class="tw-flex tw-flex-col tw-gap-1">
-                        <div class="tw-font-semibold">Michael Chen</div>
-                        <div class="tw-text-[#4b4b4b]">Sharp Cuts, Founder</div>
+                    <div class="tw-flex tw-flex-col">
+                        <div class="tw-font-bold tw-text-primary">Michael Chen</div>
+                        <div class="tw-text-sm tw-text-gray-500">Sharp Cuts, Founder</div>
                     </div>
                 </div>
-                <p class="tw-mt-4 tw-italic tw-text-gray-600">
+                <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
                     "The financial dashboard is incredible. I can see exactly how my business is performing every day."
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="tw-mt-10 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]">
-        <h3 class="tw-text-3xl tw-font-medium tw-text-primary max-md:tw-text-2xl">
+    <section class="reveal tw-mt-10 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%]">
+        <h3 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
             Custom Websites for your Brand
         </h3>
         <div class="tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-overflow-hidden">
             <div class="tw-relative tw-flex tw-w-fit tw-place-content-center tw-place-items-center">
                 <div
-                    class="tw-flex tw-max-h-[600px] tw-min-h-[400px] tw-min-w-[350px] tw-max-w-[1000px] tw-overflow-hidden tw-rounded-2xl tw-shadow-2xl">
+                    class="reveal tw-flex tw-max-h-[600px] tw-min-h-[400px] tw-min-w-[350px] tw-max-w-[1000px] tw-overflow-hidden tw-rounded-2xl tw-shadow-2xl">
                     <img src="./assets/images/home/barber_website.png" alt="Custom Website Preview"
                         class="tw-h-full tw-w-full tw-object-cover" />
                 </div>
@@ -275,50 +261,74 @@
         </div>
     </section>
 
-    <section class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]" id="pricing">
-        <h3 class="tw-text-3xl tw-font-medium tw-text-primary max-md:tw-text-2xl">
+    <section class="reveal tw-mt-10 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%] tw-bg-notion-subtle"
+        id="pricing">
+        <h2 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
             Simple, Transparent Pricing
-        </h3>
-        <div class="tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-8 max-lg:tw-flex-col">
+        </h2>
+        <div class="tw-mt-12 tw-flex tw-flex-wrap tw-place-content-center tw-gap-8">
             <div
-                class="tw-flex tw-w-[380px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]">
-                <h3 class="">
-                    <span class="tw-text-5xl tw-font-semibold">£12</span>
-                    <span class="tw-text-2xl tw-text-gray-600">/mo</span>
-                </h3>
-                <p class="tw-mt-3 tw-text-center tw-text-gray-600">
-                    Starter
-                </p>
-                <hr />
-                <ul class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-center tw-text-lg tw-text-gray-600">
-                    <li>Basic Booking System</li>
-                    <li>Simple Schedule Manager</li>
-                    <li>Custom URL</li>
-                    <li>Email Alerts</li>
+                class="reveal tw-flex tw-w-[350px] tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-8 hover:tw-border-primary/20 tw-transition-colors">
+                <div class="tw-text-lg tw-font-bold tw-text-primary">Starter</div>
+                <div class="tw-mt-4 tw-flex tw-items-baseline tw-gap-1">
+                    <span class="tw-text-5xl tw-font-bold">£12</span>
+                    <span class="tw-text-gray-500">/mo</span>
+                </div>
+                <p class="tw-mt-4 tw-text-gray-600">Perfect for individuals just getting started.</p>
+                <ul class="tw-mt-8 tw-flex tw-flex-col tw-gap-4">
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Basic Booking System</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Simple Schedule Manager</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Custom URL</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Email Alerts</span>
+                    </li>
                 </ul>
                 <a href="#signup"
-                    class="btn tw-mt-8 !tw-w-full tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.02]">
+                    class="btn !tw-w-full tw-mt-10 !tw-bg-notion-subtle !tw-text-primary !tw-border-notion-border hover:!tw-bg-white transition-all">
                     Get Started
                 </a>
             </div>
             <div
-                class="tw-flex tw-w-[380px] tw-flex-col tw-place-items-center tw-gap-2 tw-rounded-lg tw-border-2 tw-border-primary tw-p-8 tw-shadow-xl max-lg:tw-w-[320px]">
-                <h3 class="">
-                    <span class="tw-text-5xl tw-font-semibold">£20</span>
-                    <span class="tw-text-2xl tw-text-gray-600">/mo</span>
-                </h3>
-                <p class="tw-mt-3 tw-text-center tw-text-gray-600">
-                    Growth
-                </p>
-                <hr />
-                <ul class="tw-mt-4 tw-flex tw-flex-col tw-gap-2 tw-text-center tw-text-lg tw-text-gray-600">
-                    <li>Advanced Booking System</li>
-                    <li>Stripe Payment Integration</li>
-                    <li>Basic Dashboard</li>
-                    <li>SMS Reminders</li>
+                class="reveal tw-flex tw-w-[350px] tw-flex-col tw-bg-white tw-border-2 tw-border-primary tw-rounded-xl tw-p-8 tw-relative">
+                <div
+                    class="tw-absolute tw-top-0 tw-right-8 tw-translate-y-[-50%] tw-bg-primary tw-text-white tw-text-xs tw-font-bold tw-px-3 tw-py-1 tw-rounded-full">
+                    POPULAR</div>
+                <div class="tw-text-lg tw-font-bold tw-text-primary">Growth</div>
+                <div class="tw-mt-4 tw-flex tw-items-baseline tw-gap-1">
+                    <span class="tw-text-5xl tw-font-bold">£20</span>
+                    <span class="tw-text-gray-500">/mo</span>
+                </div>
+                <p class="tw-mt-4 tw-text-gray-600">Built for growing businesses and salons.</p>
+                <ul class="tw-mt-8 tw-flex tw-flex-col tw-gap-4">
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Advanced Booking System</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Stripe Payment Integration</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Basic Dashboard</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>SMS Reminders</span>
+                    </li>
                 </ul>
                 <a href="#signup"
-                    class="btn tw-mt-8 !tw-w-full tw-transition-transform tw-duration-[0.3s] hover:tw-scale-x-[1.02]">
+                    class="btn !tw-w-full tw-mt-10 !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all">
                     Get Started
                 </a>
             </div>
@@ -326,20 +336,22 @@
     </section>
 
     <section
-        class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]"
+        class="reveal tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[10%] tw-bg-secondary"
         id="signup">
-        <div class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-3">
-            <h2 class="tw-text-2xl tw-text-primary max-md:tw-text-xl">
+        <div
+            class="tw-flex tw-w-full tw-max-w-4xl tw-flex-col tw-place-content-center tw-place-items-center tw-gap-6 tw-bg-white tw-p-12 tw-rounded-2xl tw-border tw-border-primary/10 tw-shadow-sm">
+            <h2 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
                 Start your free trial today
             </h2>
-            <h2 class="tw-text-xl max-md:tw-text-lg font-medium">
+            <h2 class="tw-text-lg max-md:tw-text-base tw-text-gray-600">
                 No credit card required. Cancel anytime.
             </h2>
-
-            <div class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-overflow-hidden tw-p-2">
-                <input type="email" class="input tw-h-full tw-w-full tw-p-2 tw-outline-none"
+            <div class="tw-flex tw-h-[50px] tw-w-full tw-max-w-md tw-place-items-center tw-gap-2">
+                <input type="email"
+                    class="input !tw-rounded-lg tw-h-full tw-w-full tw-p-4 tw-border-notion-border focus:tw-border-primary"
                     placeholder="Enter your email" />
-                <a class="btn tw-transition-colors tw-duration-[0.3s]" href="">
+                <a class="btn !tw-h-full !tw-px-8 !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all"
+                    href="">
                     Join Boka
                 </a>
             </div>
@@ -347,16 +359,35 @@
     </section>
 
     <footer
-        class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
-        <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
+        class="tw-mt-auto tw-flex tw-w-full tw-flex-col tw-place-items-center tw-gap-6 tw-p-12 tw-border-t tw-border-notion-border tw-bg-white">
+        <div class="tw-flex tw-flex-col tw-place-items-center tw-gap-4">
             <h2 class="tw-text-3xl tw-font-bold tw-text-primary">Boka</h2>
-            <div class="tw-text-center">
+            <div class="tw-text-gray-500 tw-text-sm">
                 Empowering small businesses with modern tools.
             </div>
+        </div>
+        <div class="tw-text-xs tw-text-gray-400">
+            © 2026 Boka Inc. All rights reserved.
         </div>
     </footer>
 </body>
 
 <script src="./index.js"></script>
+<script>
+    // Reveal on scroll logic
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
 
 </html>

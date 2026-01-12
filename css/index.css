@@ -1,45 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-:root{
+:root {
 
-    --btn-color: #fdfdfd;/* button color*/
-    --btn-bg: #4f55c1;/* button bg color*/
+    --btn-color: #ffffff;
+    --btn-bg: #0f172a;
 
-    --primary-text-color: #4f55c1;
-    --link-hover: #4f55c1;
-    --input-hover-bd-color: #4f55c1;
+    --primary-text-color: #0f172a;
+    --link-hover: #0f172a;
+    --input-hover-bd-color: #0f172a;
+
+    --notion-bg: #ffffff;
+    --notion-subtle: #f7f6f3;
+    --notion-border: #e9e9e7;
+    --notion-text: #37352f;
 }
 
 
 html {
     scroll-behavior: smooth;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
+    color: var(--notion-text);
+    background-color: var(--notion-bg);
 }
 
-header{
-    /* background-color: #fff;
-    color: #000; */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-fade {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.reveal-fade.active {
+    opacity: 1;
 }
 
 
-header > .collapsible-header{
-    display: flex;
-    gap: 1rem;
-    width: 100%;
-    background-color: inherit;
-    place-content: center;
-    overflow: hidden;
+
+
+
+
+.animated-collapse {
     transition: width 0.3s ease;
 }
 
-.animated-collapse{
-    transition: width 0.3s ease;
-}
-
-.header-gradient{
-    background: rgb(206,174,212);
-    background: linear-gradient(83deg, #ceaed474 15%, #abd4e693 33%, #73edc097 79%, #8c91e86b 100%);
-    filter: blur(100px);
+.header-gradient {
+    display: none;
+    /* Removed heavy gradient for Notion style */
 }
 
 .header-links {
@@ -56,39 +71,37 @@ header > .collapsible-header{
     color: var(--link-hover);
 }
 
-.primary-text-color{
+.primary-text-color {
     color: var(--primary-text-color);
 }
 
-.opacity-0{
+.opacity-0 {
     opacity: 0 !important;
 }
 
-.opacity-100{
+.opacity-100 {
     opacity: 100 !important;
 }
 
-.btn{
-    padding: 10px 15px;
+.btn {
+    padding: 8px 16px;
     width: max-content;
-    border-radius: 24px;
+    border-radius: 6px;
+    /* Notion style uses subtle rounding */
     color: var(--btn-color);
     background-color: var(--btn-bg);
     justify-content: center;
     align-items: center;
     display: flex;
     cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
 }
 
-.btn:hover{
 
-}
 
-.btn:disabled{
-    cursor: default;
-}
-
-.input{
+.input {
     padding: 10px;
     background-color: transparent;
     border-radius: 25px;
@@ -98,15 +111,17 @@ header > .collapsible-header{
     /* transition: border 0.3s; */
 }
 
-.input:active, .input:focus, .input:focus-within{
+.input:active,
+.input:focus,
+.input:focus-within {
     border: 2px solid var(--input-hover-bd-color);
 }
 
-.input-error{
+.input-error {
     border-bottom: 3px solid #ff1e1e;
 }
 
-.input-error:focus-within{
+.input-error:focus-within {
     border-bottom: 3px solid #fd0101;
 }
 
@@ -116,12 +131,12 @@ header > .collapsible-header{
     margin-top: 20px;
 }
 
-.footer-link{
+.footer-link {
     color: #0d0d0d;
     transition: color 0.3s;
 }
 
-.footer-link:hover{
+.footer-link:hover {
     color: #483cf4;
 }
 
@@ -132,7 +147,7 @@ header > .collapsible-header{
     margin: auto;
 }
 
-.review-card{
+.review-card {
     box-shadow: 0px 2px 4px #757474a0;
     border-radius: 15px;
     /* width: 200px; */
@@ -164,36 +179,4 @@ header > .collapsible-header{
     transition: height 0.5s;
     text-align: justify;
     margin-top: 10px;
-}
-
-.collapsible .active,
-.collapsible:hover {
-    /* background-color: #dedddd; */
-}
-
-@media not all and (min-width: 1024px) {
-    header .collapsible-header {
-        position: fixed;
-        right: 0px;
-        flex-direction: column;
-        opacity: 0;
-        height: 100vh;
-        min-height: 100vh;
-        height: 100dvh;
-        width: 0vw;
-        justify-content: space-between;
-        padding: 5px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        place-items: end;
-        background-color: #ffffff;
-        color: #000000;
-        overflow-y: auto;
-        box-shadow: 2px 0px 3px #000;
-    }
-
-    .header-links{
-        color: black;
-    }
-    
 }
