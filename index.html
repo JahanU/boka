@@ -1,119 +1,404 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boka</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./images/palastine-logo.svg" type="image/png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boka | All-in-one Platform for Barbers & Salons</title>
+    <meta name="description"
+        content="Manage bookings, payments, and your website with Boka. The ultimate SaaS for small businesses." />
+    <link rel="shortcut icon" href="./assets/logo/boka_logo.png" type="image/x-icon" />
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Boka - All-in-one Platform" />
+    <meta property="og:description"
+        content="Empower your barber shop or salon with Boka's booking and payment systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://boka.io" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="./tailwind-runtime.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-notion-text">
 
-    <div class="background-wrapper"></div>
-
-    <main class="notion-page">
-        <!-- Hero Section -->
-        <header class="hero-section animate-on-scroll">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Trusted by professionals worldwide</span>
+    <!-- <header
+        class="lgtw-max-w-lg:tw-justify-around tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-fixed tw-top-0 tw-z-50 tw-flex tw-h-[60px] tw-w-full tw-bg-white/80 tw-backdrop-blur-md tw-border-b tw-border-notion-border tw-px-[5%] tw-text-notion-text">
+        <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+            <div
+                class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-notion-text max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+                <a class="header-links" href=""> About us </a>
+                <a class="header-links" href="#pricing"> Pricing </a>
+                <a class="header-links" href=""> Features </a>
             </div>
-            <h1>Boka</h1>
-            <p class="subtitle">Get booked. Get paid. Grow your business.
-                <br>
-                The all-in-one booking platform for barbers, salons, and beauty professionals
-            </p>
-            <div class="hero-cta">
-                <button class="cta-button secondary hero-btn barber-demo-trigger">View Barber Demo ↗</button>
-                <button class="cta-button primary hero-btn business-app-trigger">View Business App ↗</button>
+        </div>
+        <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-notion-text lg:tw-hidden"
+            onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header> -->
+
+    <section
+        class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]">
+
+        <!-- Subtle background flourish -->
+        <div
+            class="tw-absolute tw-top-1/4 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-w-[800px] tw-h-[800px] tw-bg-blue-50/50 tw-rounded-full tw-blur-[120px] tw-pointer-events-none tw-animate-fade-in">
+        </div>
+
+        <div
+            class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-flex-col tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center">
+            <div class="tw-flex tw-flex-col tw-place-content-center tw-items-center">
+                <div
+                    class="tw-text-center tw-text-6xl tw-font-bold tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug tw-animate-fade-in-up">
+                    <br />
+                    <span class="tw-text-primary">Boka </span>
+                </div>
+                <div
+                    class="tw-mt-10 tw-max-w-[600px] tw-p-2 tw-text-center max-lg:tw-max-w-full tw-text-lg tw-text-gray-600 tw-animate-fade-in-up delay-200">
+                    Get booked. Get paid. Grow your business.
+                    The all-in-one booking platform for barbers, salons, and beauty professionals
+                </div>
+
+                <div
+                    class="tw-mt-8 tw-flex tw-flex-wrap tw-place-content-center tw-gap-4 tw-overflow-hidden tw-p-2 tw-animate-fade-in-up delay-400">
+                    <a class="btn !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all"
+                        href="https://alisbarber-dev.netlify.app/" target="_blank">
+                        View Barber Demo
+                    </a>
+                    <a class="btn !tw-bg-secondary !tw-text-primary !tw-border-primary/20 hover:tw-bg-secondary/40 hover:tw-scale-105 active:tw-scale-95 transition-all font-medium"
+                        href="https://boka-business.netlify.app/" target="_blank">
+                        <span>View Business Dashboard</span>
+                    </a>
+                </div>
             </div>
-        </header>
+    </section>
 
-        <hr class="divider animate-on-scroll">
+    <section>
+        <div
+            class="tw-mt-10 tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-4 tw-animate-fade-in-up delay-500">
+            <div class="tw-relative tw-flex tw-w-fit tw-place-content-center tw-place-items-center tw-animate-float">
+                <div
+                    class="tw-flex tw-max-h-[600px] tw-min-h-[450px] tw-min-w-[350px] tw-max-w-[1000px] tw-overflow-hidden tw-rounded-2xl tw-shadow-[0_20px_50px_rgba(15,23,42,0.1)] tw-border tw-border-slate-200">
+                    <img src="./assets/images/home/boka_dashboard.png" alt="Boka Dashboard Preview"
+                        class="tw-h-full tw-w-full tw-object-cover" />
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
 
-        <!-- Showcase Section -->
-        <section class="showcase-section animate-on-scroll">
-            <h2 class="section-title">Our Work</h2>
-            <div class="gallery-grid">
-                <!-- <div class="gallery-item">
-                    <div class="placeholder-img" style="background-color: #ffe8cc;">Example Salon</div>
-                    <p class="caption">The Cut Above</p>
-                </div> -->
-                <a href="https://alisbarber-dev.netlify.app/" target="_blank" class="gallery-item-link">
-                    <div class="gallery-item">
-                        <div class="placeholder-img"
-                            style="background: url('images/alisbarber.png') center/cover no-repeat;"></div>
-                        <p class="caption">Ali's Barbers ↗</p>
+    <!--
+    <section
+        class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6">
+        <div class="tw-flex tw-w-full tw-place-content-center tw-gap-10">
+    <div class="tw-h-[30px] tw-w-[150px]">
+        <img src="./assets/images/brand-logos/google.svg" alt="Google"
+            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+            srcset="" />
+    </div>
+    <div class="tw-h-[30px] tw-w-[150px]">
+        <img src="./assets/images/brand-logos/microsoft.svg" alt="Microsoft"
+            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+            srcset="" />
+    </div>
+    <div class="tw-h-[30px] tw-w-[150px]">
+        <img src="./assets/images/brand-logos/adobe.svg" alt="Adobe"
+            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
+            srcset="" />
+    </div>
+    </div>
+    </section>
+    -->
+
+    <section
+        class="reveal tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6">
+        <div class="tw-flex tw-max-w-[750px] tw-flex-col tw-gap-5 tw-text-center">
+            <h2 class="tw-mt-10 tw-text-4xl tw-font-semibold max-lg:tw-text-3xl">
+                Powerful
+                <span class="tw-text-primary">Business</span>
+                Insights
+            </h2>
+
+            <div class="tw-text-gray-600">
+                Take control with a comprehensive financial overview and real-time booking management.
+                Monitor your revenue, track appointments, and grow your business with data-driven decisions
+                all from a single, intuitive dashboard.
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="reveal tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-12 tw-bg-notion-subtle"
+        id="">
+        <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
+            <div class="tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
+                <h3 class="tw-text-sm tw-font-bold tw-uppercase tw-tracking-widest tw-text-primary/60">
+                    Features
+                </h3>
+                <h2 class="tw-text-4xl tw-font-bold tw-text-primary">All you need in one place</h2>
+            </div>
+            <div class="tw-mt-12 tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-6 tw-max-w-6xl">
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-calendar-check tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Online Booking</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
+                        Let clients book appointments 24/7 with a seamless, mobile-friendly interface.
                     </div>
+                </div>
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-credit-card tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Online Payments</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
+                        Secure integrated payments via Stripe. Take payments upfront or pay in store.
+                    </div>
+                </div>
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-graph-up tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Financial Dashboard</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
+                        Real-time insights into your revenue, growth, and top-performing services.
+                    </div>
+                </div>
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-layout-text-window-reverse tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Custom Website</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
+                        A professionally designed website for your brand, fully integrated with your booking system.
+                    </div>
+                </div>
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-people tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Staff Management</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
+                        Manage working hours, rotations, and performance for your business.
+                    </div>
+                </div>
+                <div
+                    class="reveal tw-flex tw-flex-col tw-gap-4 tw-p-8 tw-bg-white tw-border tw-border-notion-border tw-rounded-xl hover:tw-border-primary/20 hover:tw-translate-y-[-4px] tw-transition-all duration-300">
+                    <i class="bi bi-bell tw-text-3xl tw-text-primary"></i>
+                    <h3 class="tw-text-xl tw-font-bold">Automated Alerts</h3>
+                    <div class="tw-text-gray-600 tw-leading-relaxed">
+                        Reduce no-shows with automated SMS and email reminders for all appointments.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-p-[5%]">
+        <h2 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
+            Success stories from our clients
+        </h2>
+        <div class="tw-mt-12 tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-2 tw-gap-8 tw-max-w-6xl">
+            <div
+                class="reveal tw-flex tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-6 shadow-sm">
+                <div class="tw-flex tw-place-items-center tw-gap-3">
+                    <!-- <div class="tw-h-12 tw-w-12 tw-overflow-hidden tw-rounded-full tw-grayscale">
+                        <img src="./assets/images/people/women.jpg" class="tw-h-full tw-w-full tw-object-cover"
+                            alt="Sarah" />
+                    </div> -->
+                    <div class="tw-flex tw-flex-col">
+                        <div class="tw-font-bold tw-text-primary">Ali</div>
+                        <div class="tw-text-sm tw-text-gray-500">Ali's Barber, Owner</div>
+                    </div>
+                </div>
+                <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                    "Boka has completely streamlined our booking process and given my buiness a new breath of life.
+                    The team at Boka have been very accommodating and helpful."
+                </p>
+            </div>
+            <div
+                class="reveal tw-flex tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-6 shadow-sm">
+                <div class="tw-flex tw-place-items-center tw-gap-3">
+                    <!-- <div class="tw-h-12 tw-w-12 tw-overflow-hidden tw-rounded-full tw-grayscale">
+                        <img src="./assets/images/people/man.jpg" class="tw-h-full tw-w-full tw-object-cover"
+                            alt="Alex" />
+                    </div> -->
+                    <div class="tw-flex tw-flex-col">
+                        <div class="tw-font-bold tw-text-primary">Sylwia Cieleszynska</div>
+                        <div class="tw-text-sm tw-text-gray-500">sc_aesthetics_uk, Owner</div>
+                    </div>
+                </div>
+                <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                    "The automated reminders have significantly reduced our no-shows. It's a game changer for my
+                    business."
+                </p>
+            </div>
+            <!-- <div
+                class="reveal tw-flex tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-6 shadow-sm">
+                <div class="tw-flex tw-place-items-center tw-gap-3">
+                    <div class="tw-h-12 tw-w-12 tw-overflow-hidden tw-rounded-full tw-grayscale">
+                        <img src="./assets/images/people/man2.jpg" class="tw-h-full tw-w-full tw-object-cover"
+                            alt="Michael" />
+                    </div>
+                    <div class="tw-flex tw-flex-col">
+                        <div class="tw-font-bold tw-text-primary">Michael Chen</div>
+                        <div class="tw-text-sm tw-text-gray-500">Sharp Cuts, Founder</div>
+                    </div>
+                </div>
+                <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                    "The financial dashboard is incredible. I can see exactly how my business is performing every day."
+                </p>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="reveal tw-mt-10 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%]">
+        <h3 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
+            Custom Websites for your Brand
+        </h3>
+        <div class="tw-mt-8 tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-overflow-hidden">
+            <div class="tw-relative tw-flex tw-w-fit tw-place-content-center tw-place-items-center">
+                <div
+                    class="reveal tw-flex tw-max-h-[600px] tw-min-h-[400px] tw-min-w-[350px] tw-max-w-[1000px] tw-overflow-hidden tw-rounded-2xl tw-shadow-2xl">
+                    <img src="./assets/images/home/barber_website.png" alt="Custom Website Preview"
+                        class="tw-h-full tw-w-full tw-object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal tw-mt-10 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%] tw-bg-notion-subtle"
+        id="pricing">
+        <h2 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
+            Simple, Transparent Pricing
+        </h2>
+        <div class="tw-mt-12 tw-flex tw-flex-wrap tw-place-content-center tw-gap-8">
+            <div
+                class="reveal tw-flex tw-w-[350px] tw-flex-col tw-bg-white tw-border tw-border-notion-border tw-rounded-xl tw-p-8 hover:tw-border-primary/20 tw-transition-colors">
+                <div class="tw-text-lg tw-font-bold tw-text-primary">Starter</div>
+                <div class="tw-mt-4 tw-flex tw-items-baseline tw-gap-1">
+                    <span class="tw-text-5xl tw-font-bold">£12</span>
+                    <span class="tw-text-gray-500">/mo</span>
+                </div>
+                <p class="tw-mt-4 tw-text-gray-600">Perfect for getting started.</p>
+                <ul class="tw-mt-8 tw-flex tw-flex-col tw-gap-4">
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Custom website </span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Web hosting
+                        </span>
+                    </li>
+                </ul>
+                <a href="#signup"
+                    class="btn !tw-w-full tw-mt-auto !tw-bg-notion-subtle !tw-text-primary !tw-border-notion-border hover:!tw-bg-white transition-all">
+                    Get Started
                 </a>
-                <!-- <div class="gallery-item">
-                    <div class="placeholder-img" style="background-color: #e3fac7;">Spa Site</div>
-                    <p class="caption">Serenity Spa</p>
-                </div> -->
             </div>
-        </section>
-
-        <hr class="divider animate-on-scroll">
-
-        <!-- Pricing Section -->
-        <section class="pricing-section animate-on-scroll">
-            <h2 class="section-title">Plans & Pricing</h2>
-            <div class="pricing-container">
-                <div class="pricing-card">
-                    <div class="price-header">
-                        <h3>Basic</h3>
-                        <span class="price">£12<span class="per-month">/mo</span></span>
-                    </div>
-                    <ul class="features-list">
-                        <li><span class="check">✓</span> Custom website</li>
-                        <li><span class="check">✓</span> Web hosting</li>
-                    </ul>
-                    <button class="cta-button">Select Basic</button>
+            <div
+                class="reveal tw-flex tw-w-[350px] tw-flex-col tw-bg-white tw-border-2 tw-border-primary tw-rounded-xl tw-p-8 tw-relative">
+                <div
+                    class="tw-absolute tw-top-0 tw-right-8 tw-translate-y-[-50%] tw-bg-primary tw-text-white tw-text-xs tw-font-bold tw-px-3 tw-py-1 tw-rounded-full">
+                    POPULAR</div>
+                <div class="tw-text-lg tw-font-bold tw-text-primary">Growth</div>
+                <div class="tw-mt-4 tw-flex tw-items-baseline tw-gap-1">
+                    <span class="tw-text-5xl tw-font-bold">£20</span>
+                    <span class="tw-text-gray-500">/mo</span>
                 </div>
-
-                <div class="pricing-card featured">
-                    <div class="price-header">
-                        <h3>Advanced</h3>
-                        <span class="price">£20<span class="per-month">/mo</span></span>
-                    </div>
-                    <ul class="features-list">
-                        <li><span class="check">✓</span> Online payment</li>
-                        <li><span class="check">✓</span> Google calendar integration</li>
-                        <li><span class="check">✓</span> Email notifications</li>
-                        <li><span class="check">✓</span> Staff dashboard</li>
-                        <li><span class="check">✓</span> Set your weekly availability</li>
-                        <li><span class="check">✓</span> Appointments management</li>
-                        <li><span class="check">✓</span> Intelligent finanical analytics</li>
-                    </ul>
-                    <button class="cta-button primary">Select Advanced</button>
-                </div>
+                <p class="tw-mt-4 tw-text-gray-600">Built for growing businesses.</p>
+                <ul class="tw-mt-8 tw-flex tw-flex-col tw-gap-4">
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Advanced Booking System</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Online payment</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Email notifications</span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Intelligent finanical analytics
+                        </span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Set your weekly availability
+                        </span>
+                    </li>
+                    <li class="tw-flex tw-items-center tw-gap-2">
+                        <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
+                        <span>Appointments management
+                        </span>
+                    </li>
+                </ul>
+                <a href="#signup"
+                    class="btn !tw-w-full tw-mt-10 !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all">
+                    Get Started
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <hr class="divider animate-on-scroll">
-
-        <!-- Demo Section -->
-        <section class="demo-section animate-on-scroll">
-            <h2 class="section-title">Try it out</h2>
-            <div class="demo-box">
-                <p>Want to see how it works? Check out our live examples.</p>
-                <div class="demo-buttons">
-                    <button class="cta-button demo-btn primary barber-demo-trigger">View Barber Website
-                        ↗</button>
-                    <button class="cta-button demo-btn primary business-app-trigger">View Business Dashboard
-                        ↗</button>
-                </div>
+    <section
+        class="reveal tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[10%] tw-bg-secondary"
+        id="signup">
+        <div
+            class="tw-flex tw-w-full tw-max-w-4xl tw-flex-col tw-place-content-center tw-place-items-center tw-gap-6 tw-bg-white tw-p-12 tw-rounded-2xl tw-border tw-border-primary/10 tw-shadow-sm">
+            <h2 class="tw-text-3xl tw-font-bold tw-text-primary max-md:tw-text-2xl">
+                Start your 1 week free trial today
+            </h2>
+            <h2 class="tw-text-lg max-md:tw-text-base tw-text-gray-600">
+                No credit card required. Cancel anytime.
+            </h2>
+            <div class="tw-flex tw-h-[50px] tw-w-full tw-max-w-md tw-place-items-center tw-gap-2">
+                <input type="email"
+                    class="input !tw-rounded-lg tw-h-full tw-w-full tw-p-4 tw-border-notion-border focus:tw-border-primary"
+                    placeholder="Enter your email" />
+                <a class="btn !tw-h-full !tw-px-8 !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all tw-flex-shrink-0"
+                    href="mailto:bokabookings@gmail.com">
+                    Join Us
+                </a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <footer
+        class="tw-mt-auto tw-flex tw-w-full tw-flex-col tw-place-items-center tw-gap-6 tw-p-12 tw-border-t tw-border-notion-border tw-bg-white">
+        <div class="tw-flex tw-flex-col tw-place-items-center tw-gap-4">
+            <h2 class="tw-text-3xl tw-font-bold tw-text-primary">Boka</h2>
+            <div class="tw-text-gray-500 tw-text-sm">
+                Empowering small businesses with modern tools.
+            </div>
+        </div>
+        <div class="tw-text-xs tw-text-gray-400">
+            © 2026 Boka Inc. All rights reserved.
+        </div>
+    </footer>
 </body>
+
+<script src="./index.js"></script>
+<script>
+    // Reveal on scroll logic
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
 
 </html>

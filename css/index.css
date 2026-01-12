@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+
+    --btn-color: #ffffff;
+    --btn-bg: #0f172a;
+
+    --primary-text-color: #0f172a;
+    --link-hover: #0f172a;
+    --input-hover-bd-color: #0f172a;
+
+    --notion-bg: #ffffff;
+    --notion-subtle: #f7f6f3;
+    --notion-border: #e9e9e7;
+    --notion-text: #37352f;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    color: var(--notion-text);
+    background-color: var(--notion-bg);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-fade {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.reveal-fade.active {
+    opacity: 1;
+}
+
+
+
+
+
+
+.animated-collapse {
+    transition: width 0.3s ease;
+}
+
+.header-gradient {
+    display: none;
+    /* Removed heavy gradient for Notion style */
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+
+.header-links:hover {
+    color: var(--link-hover);
+}
+
+.primary-text-color {
+    color: var(--primary-text-color);
+}
+
+.opacity-0 {
+    opacity: 0 !important;
+}
+
+.opacity-100 {
+    opacity: 100 !important;
+}
+
+.btn {
+    padding: 8px 16px;
+    width: max-content;
+    border-radius: 6px;
+    /* Notion style uses subtle rounding */
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+
+
+.input {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 25px;
+    /* outline: none; */
+    min-width: 100px;
+    border: 2px solid #818080;
+    /* transition: border 0.3s; */
+}
+
+.input:active,
+.input:focus,
+.input:focus-within {
+    border: 2px solid var(--input-hover-bd-color);
+}
+
+.input-error {
+    border-bottom: 3px solid #ff1e1e;
+}
+
+.input-error:focus-within {
+    border-bottom: 3px solid #fd0101;
+}
+
+/* Navigation dots styling */
+.dots-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-link {
+    color: #0d0d0d;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #483cf4;
+}
+
+
+.review-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.review-card {
+    box-shadow: 0px 2px 4px #757474a0;
+    border-radius: 15px;
+    /* width: 200px; */
+    /* height: 550px; */
+    padding: 10px;
+}
+
+/* --------- collapsible div ---------- */
+.collapsible {
+    background-color: #f3f0f0;
+    color: #2b2929;
+    /* cursor: pointer; */
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+/* Style for the collapsible content */
+.content {
+    padding: 0 18px;
+    /* display: none; */
+    height: 0px;
+    overflow: hidden;
+    background-color: transparent;
+    transition: height 0.5s;
+    text-align: justify;
+    margin-top: 10px;
+}
