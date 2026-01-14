@@ -42,10 +42,7 @@
             onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
     </header> -->
 
-    <section
-        class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]">
-
-        <!-- Subtle background flourish -->
+    <section class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden">
         <div
             class="tw-absolute tw-top-1/4 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-w-[800px] tw-h-[800px] tw-bg-blue-50/50 tw-rounded-full tw-blur-[120px] tw-pointer-events-none tw-animate-fade-in">
         </div>
@@ -293,10 +290,10 @@
                         </span>
                     </li>
                 </ul>
-                <a href="#signup"
-                    class="btn !tw-w-full tw-mt-auto !tw-bg-notion-subtle !tw-text-primary !tw-border-notion-border hover:!tw-bg-white transition-all">
+                <button onclick="handleTrial()"
+                    class="btn !tw-w-full tw-mt-4 md:tw-mt-auto !tw-bg-notion-subtle !tw-text-primary !tw-border-notion-border hover:!tw-bg-white transition-all">
                     Get Started
-                </a>
+                </button>
             </div>
             <div
                 class="reveal tw-flex tw-w-[350px] tw-flex-col tw-bg-white tw-border-2 tw-border-primary tw-rounded-xl tw-p-8 tw-relative">
@@ -334,14 +331,13 @@
                     </li>
                     <li class="tw-flex tw-items-center tw-gap-2">
                         <i class="bi bi-check2 tw-text-primary tw-font-bold"></i>
-                        <span>Appointments management
-                        </span>
+                        <span>Appointments management</span>
                     </li>
                 </ul>
-                <a href="#signup"
-                    class="btn !tw-w-full tw-mt-10 !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all">
+                <button onclick="handleTrial()"
+                    class="btn !tw-w-full tw-mt-4 !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all">
                     Get Started
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -357,15 +353,16 @@
             <h2 class="tw-text-lg max-md:tw-text-base tw-text-gray-600">
                 No credit card required. Cancel anytime.
             </h2>
-            <div class="tw-flex tw-h-[50px] tw-w-full tw-max-w-md tw-place-items-center tw-gap-2">
-                <input type="email"
-                    class="input !tw-rounded-lg tw-h-full tw-w-full tw-p-4 tw-border-notion-border focus:tw-border-primary"
+            <form name="free-trial" method="POST" data-netlify="true"
+                class="tw-flex tw-flex-col tw-w-full tw-max-w-md tw-place-items-center tw-gap-4">
+                <input type="email" name="email" id="trial-email" required
+                    class="input !tw-rounded-lg tw-h-[50px] tw-w-full tw-p-4 tw-border-notion-border focus:tw-border-primary"
                     placeholder="Enter your email" />
-                <a class="btn !tw-h-full !tw-px-8 !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all tw-flex-shrink-0"
-                    href="mailto:bokabookings@gmail.com">
+                <button type="submit"
+                    class="btn !tw-h-[50px] !tw-w-full !tw-bg-primary !tw-text-white hover:tw-opacity-90 transition-all tw-flex-shrink-0">
                     Join Us
-                </a>
-            </div>
+                </button>
+            </form>
         </div>
     </section>
 
@@ -373,7 +370,7 @@
         class="tw-mt-auto tw-flex tw-w-full tw-flex-col tw-place-items-center tw-gap-6 tw-p-12 tw-border-t tw-border-notion-border tw-bg-white">
         <div class="tw-flex tw-flex-col tw-place-items-center tw-gap-4">
             <h2 class="tw-text-3xl tw-font-bold tw-text-primary">Boka</h2>
-            <div class="tw-text-gray-500 tw-text-sm">
+            <div class="tw-text-gray-500 tw-text-sm tw-whitespace-nowrap max-md:tw-text-[13px]">
                 Empowering small businesses with modern tools.
             </div>
         </div>
